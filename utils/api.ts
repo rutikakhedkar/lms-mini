@@ -66,7 +66,18 @@ export async function logoutUser() {
   return api.post(ENDPOINTS.LOGOUT, {});
 }
 
+export async function getCurrentUser() {
+  return api.get(ENDPOINTS.CURRENT_USER);
+}
 
+// Courses & Instructors
+export async function fetchCourses(page = 1, limit = 20) {
+  return api.get(`${ENDPOINTS.COURSES}?page=${page}&limit=${limit}`);
+}
+
+export async function fetchInstructors(limit = 20) {
+  return api.get(`${ENDPOINTS.INSTRUCTORS}?limit=${limit}`);
+}
 
 
 
