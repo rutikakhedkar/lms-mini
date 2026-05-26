@@ -11,6 +11,7 @@ A Mini LMS (Learning Management System) built with React Native Expo.
 - **Forms**: React Hook Form + Zod validation
 - **Images**: Expo Image (with caching)
 - **Notifications**: Expo Notifications
+- **AI**: Google Gemini (course insights & recommendations)
 - **Offline**: @react-native-community/netinfo
 - **API**: [freeapi.app](https://api.freeapi.app)
 
@@ -18,6 +19,7 @@ A Mini LMS (Learning Management System) built with React Native Expo.
 
 - **Auth** — Register/Login with JWT, auto-login on restart, secure token storage
 - **Course Catalog** — Browse courses from freeapi.app with search & pull-to-refresh
+- **AI Insights** — Gemini-generated summaries, learning outcomes, and suitability on course detail
 - **Bookmarks** — Save courses locally; notification when 5+ bookmarked
 - **Enroll** — Enroll in courses with visual feedback
 - **WebView** — Course content viewer with Native ↔ WebView messaging
@@ -39,7 +41,7 @@ constants/     # API endpoints, color palette
 hooks/         # useNetworkStatus
 providers/     # AuthProvider, CourseProvider
 store/         # authStore, courseStore (context + helpers)
-utils/         # api client (fetch + retry), notifications
+utils/         # api client (fetch + retry), notifications, ai (Gemini)
 ```
 
 ## Setup & Run
@@ -47,6 +49,8 @@ utils/         # api client (fetch + retry), notifications
 ```bash
 # Install dependencies
 npm install
+
+# Copy .env.example to .env and set EXPO_PUBLIC_BASE_URL and EXPO_PUBLIC_GEMINI_API_KEY
 
 # Start Expo
 npx expo start
@@ -60,14 +64,14 @@ npx expo start --ios
 
 ## API Endpoints Used
 
-| Purpose | Endpoint |
-|---|---|
-| Register | `POST /api/v1/users/register` |
-| Login | `POST /api/v1/users/login` |
-| Logout | `POST /api/v1/users/logout` |
-| Current User | `GET /api/v1/users/current-user` |
-| Courses | `GET /api/v1/public/randomproducts` |
-| Instructors | `GET /api/v1/public/randomusers` |
+| Purpose      | Endpoint                            |
+| ------------ | ----------------------------------- |
+| Register     | `POST /api/v1/users/register`       |
+| Login        | `POST /api/v1/users/login`          |
+| Logout       | `POST /api/v1/users/logout`         |
+| Current User | `GET /api/v1/users/current-user`    |
+| Courses      | `GET /api/v1/public/randomproducts` |
+| Instructors  | `GET /api/v1/public/randomusers`    |
 
 ## Key Architectural Decisions
 
@@ -76,3 +80,4 @@ npx expo start --ios
 - **SecureStore** for tokens, **AsyncStorage** for bookmarks/enrollments
 - **Fetch with retry** — built-in retry (2 attempts) + 10s timeout on every request
 - **Memoized components** — `CourseCard` wrapped in `memo`, filtered list in `useMemo`
+- **Gemini API** — structured JSON insights generated on the course detail screen
