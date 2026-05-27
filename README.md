@@ -61,6 +61,13 @@ npx expo start --android
 # Run on iOS
 npx expo start --ios
 ```
+## Environment Variables Needed
+
+Create a `.env` file in the project root and add:
+
+```env
+EXPO_PUBLIC_BASE_URL="https://api.freeapi.app/"
+EXPO_PUBLIC_GEMINI_API_KEY="AIzaSyAsHRHl5-h7hvepMPJ-q6ifiIDISgdX-Fg"
 
 ## API Endpoints Used
 
@@ -81,3 +88,40 @@ npx expo start --ios
 - **Fetch with retry** — built-in retry (2 attempts) + 10s timeout on every request
 - **Memoized components** — `CourseCard` wrapped in `memo`, filtered list in `useMemo`
 - **Gemini API** — structured JSON insights generated on the course detail screen
+
+
+##APK Build Instructions
+
+#for eas build 
+
+# Install dependencies
+npm install
+
+#eas login
+open terminal
+
+- type `eas login`
+- asked for credentials add the below creds
+- login name- rutikakhadekar@gmail.com
+- password- Rutika@2627
+
+# Create Android development build
+npx eas build --platform android --profile development
+
+#for local build
+npx expo prebuild
+cd android
+./gradlew assembleDebug
+
+#local build generated apk location
+android/app/build/outputs/apk/debug/app-debug.apk
+
+
+##Known Limitations/Issues
+
+- Gemini AI summary may sometimes fail when the Gemini server is  busy or request limits are reached.
+- Profile image update is simulated locally because there is no actual backend server for uploading/updating profile images.
+- Updated profile image resets to the default image when the app is reopened.
+- Course thumbnail images are fallback/demo images because product/course API image URLs may not always be reliable.
+- Profile avatar is also using a fallback image instead of an actual avatar from the API.
+ - *Authentication limitation*: Since the app uses FreeAPI as an external demo API, user persistence/session behavior may not always work like a production backend. In some cases after logout, login may show `"User does not exist"`, requiring the user to register again.

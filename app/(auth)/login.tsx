@@ -40,6 +40,7 @@ export default function LoginScreen() {
       const res = await loginUser(data) as { data: { accessToken: string; user: object, refreshToken: string } };
       await login(res.data.accessToken, res.data.user as Parameters<typeof login>[1], res.data.refreshToken as Parameters<typeof login>[2]);
     } catch (err: unknown) {
+      console.log(err);
       const msg = err instanceof Error ? err.message : 'Login failed';
       Alert.alert('Login Failed', msg);
     } finally {
