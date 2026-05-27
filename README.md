@@ -125,3 +125,28 @@ android/app/build/outputs/apk/debug/app-debug.apk
 - Course thumbnail images are fallback/demo images because product/course API image URLs may not always be reliable.
 - Profile avatar is also using a fallback image instead of an actual avatar from the API.
  - *Authentication limitation*: Since the app uses FreeAPI as an external demo API, user persistence/session behavior may not always work like a production backend. In some cases after logout, login may show `"User does not exist"`, requiring the user to register again.
+
+
+## App Screenshots
+
+<p align="center">
+  <img src="./screenshots/splashscreen.jpg" width="220"/>
+  <img src="./screenshots/login.jpg" width="220"/>
+  <img src="./screenshots/register.jpg" width="220"/>
+</p>
+
+<p align="center">
+  <img src="./screenshots/courseslist.jpg" width="220"/>
+  <img src="./screenshots/course-details.jpg" width="220"/>
+  <img src="./screenshots/course-content-webview.jpg" width="220"/>
+</p>
+
+<p align="center">
+  <img src="./screenshots/courses-bookmarkscreen.jpg" width="220"/>
+  <img src="./screenshots/offline-banner.jpg" width="220"/>
+  <img src="./screenshots/profile.jpg" width="220"/>
+</p>
+
+<p align="center">
+  <img src="./screenshots/notifications.jpg" width="220"/>
+</p>
