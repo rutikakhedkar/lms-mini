@@ -131,23 +131,23 @@ android/app/build/outputs/apk/debug/app-debug.apk
 ## App Screenshots
 
 <p align="center">
-  <img src="./screenshots/splashscreen.jpg" width="220"/>
-  <img src="./screenshots/login.jpg" width="220"/>
-  <img src="./screenshots/register.jpg" width="220"/>
+  <img src="./screenshots/splashscreen.jpeg" width="220"/>
+  <img src="./screenshots/login.jpeg" width="220"/>
+  <img src="./screenshots/register.jpeg" width="220"/>
 </p>
 
 <p align="center">
-  <img src="./screenshots/courseslist.jpg" width="220"/>
-  <img src="./screenshots/course-details.jpg" width="220"/>
-  <img src="./screenshots/course-content-webview.jpg" width="220"/>
+  <img src="./screenshots/courseslist.jpeg" width="220"/>
+  <img src="./screenshots/course-details.jpeg" width="220"/>
+  <img src="./screenshots/course-content-webview.jpeg" width="220"/>
 </p>
 
 <p align="center">
-  <img src="./screenshots/courses-bookmarkscreen.jpg" width="220"/>
-  <img src="./screenshots/offline-banner.jpg" width="220"/>
-  <img src="./screenshots/profile.jpg" width="220"/>
+  <img src="./screenshots/courses-bookmarkscreen.jpeg" width="220"/>
+  <img src="./screenshots/offline-banner.jpeg" width="220"/>
+  <img src="./screenshots/profile.jpeg" width="220"/>
 </p>
 
 <p align="center">
-  <img src="./screenshots/notifications.jpg" width="220"/>
+  <img src="./screenshots/notifications.jpeg" width="220"/>
 </p>
