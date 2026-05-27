@@ -49,14 +49,21 @@ export default function LoginScreen() {
   };
 
   return (
-    <KeyboardAvoidingView
-      className="flex-1"
-      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+      <KeyboardAvoidingView
+    style={{ flex: 1 }}
+    behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+    keyboardVerticalOffset={20}
+  >
+    <ScrollView
+      contentContainerStyle={{
+        flexGrow: 1,
+        padding: 24,
+        justifyContent: 'center',
+      }}
+      keyboardShouldPersistTaps="handled"
+      automaticallyAdjustKeyboardInsets
+      showsVerticalScrollIndicator={false}
     >
-      <ScrollView
-        contentContainerClassName="flex-grow bg-background justify-center p-6"
-        keyboardShouldPersistTaps="handled"
-      >
         <View className="items-center mb-10">
           <Text className="text-[52px] mb-2">📚</Text>
           <Text className="text-[28px] font-extrabold text-foreground mb-1">EduTech LMS</Text>
