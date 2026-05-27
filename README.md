@@ -66,7 +66,7 @@ npx expo start --ios
 Create a `.env` file in the project root and add:
 
 ```env
-EXPO_PUBLIC_BASE_URL="https://api.freeapi.app/"
+EXPO_PUBLIC_BASE_URL="https://api.freeapi.app"
 EXPO_PUBLIC_GEMINI_API_KEY="AIzaSyAsHRHl5-h7hvepMPJ-q6ifiIDISgdX-Fg"
 ```
 
