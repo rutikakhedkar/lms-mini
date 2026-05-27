@@ -65,7 +65,6 @@ export default function ProfileScreen() {
       const imageUri = result.assets[0].uri;
       setAvatarUrl(imageUri);
       // Upload to backend/cloudinary/S3
-      console.log(imageUri);
     }
   };
 
